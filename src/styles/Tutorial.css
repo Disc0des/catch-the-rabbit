@@ -1,0 +1,8 @@
+.tutorial-container {
+  background: url("../grass.png");
+  background-position: center;
+  background-size: cover;
+  width: 100vh;
+  height: 100vh;
+  background: fixed;
+}

@@ -1,0 +1,17 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 5rem;
+}
+
+.logo {
+  width: 50%;
+  background-color: green;
+  border: green, solid, 10px;
+  padding: 10px;
+}
+
+.leaderboard {
+  list-style-type: none;
+}
