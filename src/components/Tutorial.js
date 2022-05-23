@@ -1,16 +1,13 @@
+/* eslint-disable react/prop-types */
 import React from "react";
-import Carousel, { CarouselItem } from "./Carousel";
+import Carousel from "./Carousel";
 import "../styles/Tutorial.css";
 
-export default function Tutorial() {
+export default function Tutorial({ setTutorialComplete }) {
   return (
     <div className="tutorial-container">
       <div className="tutorial-window">
-        <Carousel>
-          <CarouselItem>Page 1</CarouselItem>
-          <CarouselItem>Page 2</CarouselItem>
-          <CarouselItem>Page 3</CarouselItem>
-        </Carousel>
+        <Carousel setTutorialComplete={setTutorialComplete} />
       </div>
     </div>
   );
