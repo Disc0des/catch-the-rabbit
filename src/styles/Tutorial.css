@@ -1,8 +1,21 @@
 .tutorial-container {
-  background: url("../grass.png");
-  background-position: center;
+  background-image: url("../cartoon_grass.jpg");
   background-size: cover;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
-  background: fixed;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tutorial-window {
+  background-color: white;
+  min-width: 300px;
+  min-height: 300px;
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+  border: #f9bd19 solid 10px;
+  overflow: hidden;
 }
