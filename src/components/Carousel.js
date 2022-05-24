@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from "react";
+import React, { useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/Carousel.css";
@@ -9,12 +9,18 @@ import hole from "../hole.png";
 import rudeRabbit from "../rude-rabbit.png";
 
 export default function Carousel({ setTutorialComplete }) {
+  const [loading, setLoading] = useState(false);
+
+  //* Button pressed starts the game after 1 second
   const startGame = () => {
     setTutorialComplete(true);
   };
   const onClickHandler = () => {
+    setLoading(true);
     setTimeout(startGame, 1000);
   };
+
+  //* settings for Slick-Slider carousel import
   const settings = {
     dots: true,
     infinite: true,
@@ -22,6 +28,7 @@ export default function Carousel({ setTutorialComplete }) {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   return (
     <Slider {...settings}>
       <div className="slide-page">
@@ -58,9 +65,17 @@ export default function Carousel({ setTutorialComplete }) {
         </p>
       </div>
       <div className="slide-page">
-        <button type="submit" className="start-button" onClick={onClickHandler}>
-          Start !
-        </button>
+        {loading ? (
+          <p>Loading ...</p>
+        ) : (
+          <button
+            type="submit"
+            className="start-button"
+            onClick={onClickHandler}
+          >
+            I&apos;ve got it !
+          </button>
+        )}
       </div>
     </Slider>
   );

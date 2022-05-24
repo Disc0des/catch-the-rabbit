@@ -1,0 +1,47 @@
+.message-text {
+  min-width: 15rem;
+  width: 100%;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.no {
+  color: black;
+  border-radius: 10px;
+  border: maroon solid 3px;
+  background-color: rgb(106, 17, 24, 0.5);
+}
+
+.yes {
+  position: absolute;
+  max-width: 80%;
+  right: 10%;
+  border-radius: 10px;
+  border: green solid 5px;
+  background-color: white;
+  height: 20rem;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.play-again {
+  font-family: "poppins";
+  font-weight: 600;
+  margin-top: 20px;
+  padding: 5px 10px;
+  background: greenyellow;
+  border: green solid 5px;
+  border-radius: 10px;
+}
+
+.play-again:hover {
+  transform: scale(1.2);
+}
+
+.play-again:active {
+  transform: scale(0.8);
+}
